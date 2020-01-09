@@ -1,0 +1,40 @@
+ #tomcat配置
+server:
+  port: 8088
+
+spring:
+  #模板引擎配置
+  application:
+    name: test-freemarker
+  freemarker:
+    cache: false
+    settings:
+      template_update_delay: 0
+      classic_compatible: true
+      number_format: 0.######
+      template_exception_handler: ignore
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+  mvc:
+    static-path-pattern: /static/**
+  #数据源配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/travel_agency?characterEncoding=utf-8
+    username: root
+    password: 123
+  #jpa配置
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: mysql
+  #security配置
+
+  #缓存配置
+
+
+
+  #日志配置
+
+
